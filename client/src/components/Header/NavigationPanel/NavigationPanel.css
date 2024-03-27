@@ -1,0 +1,42 @@
+.nav-container {
+  background-color: #f2f2f2 ;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  height: auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.nav-container .logo-img {
+  margin: 2px;
+  max-width: 100px;
+  height: auto;
+  border-radius: 45px;
+}
+
+.nav-container .nav {
+  margin: 10px;
+}
+
+.nav-container .navButton{
+  width: 95%;
+  height: auto;
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 45px;
+  border: 1px solid grey;
+  background-color: #fff;
+}
+
+.nav-container .navButton:hover{
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}

@@ -1,0 +1,68 @@
+.new-message {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  padding: 10px;
+  height: auto;
+  width: auto;
+  margin: 40px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.new-message h3{
+  margin-top: 10px;
+  margin-bottom: auto;
+}
+
+.info-user{
+  display: flex;
+  width: auto;
+  height: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.user-img {
+  max-width: 45px;
+  height: auto;
+  border: 2px solid grey;
+  border-radius: 40px;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.info-user p:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.input-message {
+  display: flex;
+  align-items: center;
+}
+
+.input-message textarea {
+  flex: 1;
+  height: 75px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  resize: none;
+}
+
+.input-message button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.input-message button:hover {
+  background-color: #4fb1dc;
+  color: #fff;
+}

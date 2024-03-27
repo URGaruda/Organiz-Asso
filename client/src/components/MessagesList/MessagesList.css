@@ -1,0 +1,16 @@
+.message-list {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  padding: 10px;
+  height: auto;
+  margin: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.message-list h3 {
+  text-align: center;
+  margin-top: 10px;
+}

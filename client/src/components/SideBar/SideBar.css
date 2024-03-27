@@ -1,0 +1,39 @@
+.block {
+  display: flex;
+}
+
+.sidebar {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    height: auto;
+    background-color: grey ;
+    padding: 5px;
+    color: black;
+    margin-right: 15px;
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: transparent;
+  color: white;
+  text-align: left;
+  border: none;
+  font-size: 16px;
+}
+
+.sidebar button:hover {
+  cursor: pointer;
+}
+
+.submenu {
+  padding-left: 20px;
+}
+
+.submenu button {
+  font-size: 16px;
+  margin-top: 5px;
+}

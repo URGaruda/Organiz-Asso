@@ -1,0 +1,25 @@
+.main-content{
+  text-align: center;
+}
+
+.forum-list{
+  text-align: left;
+  margin-top: 10px;
+  border: 0.1;
+}
+
+.user-list{
+  text-align: left;
+  margin-top: 10px;
+  border: 0.1;
+}
+
+.forum-list:hover{
+  cursor: pointer;
+  background-color: #f2f2f2;;
+}
+
+.user-list:hover{
+  cursor: pointer;
+  background-color: #f2f2f2;;
+}
