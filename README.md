@@ -41,11 +41,11 @@ La base de données est définit grâce à MongoDB.
 **users** : 
 ```json
 {
-   _id : objectId('6602f45a954659e97353c359'),
-   login : DupondDupond,
-   password : $2b$10$qrhcNl.GR7xjWya/Btjp6.L4FFxiR.xpXAq0wkrWjstyb2UtQLnp.,
-   lastname : Dupond,
-   firsname : Dupond
+   "_id" : objectId('6602f45a954659e97353c359'),
+   "login" : "DupondDupond",
+   "password" : "$2b$10$qrhcNl.GR7xjWya/Btjp6.L4FFxiR.xpXAq0wkrWjstyb2UtQLnp.",
+   "lastname" : "Dupond",
+   "firsname" : "Dupond"
 }
 ```
 Avec les champs _id de type `ObjectId` (généré automatiquement lors de l'ajout d'un document dans la base de donnée) et login, password, lastname, firsname de type `String`. 
