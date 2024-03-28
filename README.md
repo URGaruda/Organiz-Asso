@@ -101,6 +101,8 @@ Avec les champs _id de type `ObjectId`, messageId, authorId, authorName et text 
 Pour lancer le serveur, se placer dans le dossier `/server` et exécuter la commande `npm start` dans un terminal. Cela lancera le serveur à l'adresse `http://localhost:4000` par défaut.  
 Pour lancer le client, se placer dans le dossier `/client` et exécuter la commande `npm start` dans un terminal. Cela compilera et lancera le client à l'adresse `http://localhost:3000` par défaut (le navigateur s'ouvre automatiquement).  
 
+Après avoir paramettré la base de donnée dans le serveur, normalement le formulaire d'enregistrement fonctionne et créer bien l'utilisateur dans la DB. De même le formulaire de login fonctionne et fait bien la comparaison avec les infos de la DB pour faire la connexion.
+
 ## A faire
 Actuellement le backend est quasiment finit, toutes les requêtes nécéssaires sont pour le moment réalisées. Il peut cependant il y avoir des erreurs à corriger. Il y a encore quelques problèmes au niveau de l'authentification à gérer.
 Il reste tout le frontend à terminer. Notamment ajouter toutes les requêtes nécéssaires avec axios dans chaque composant où il faut récupérer les infos de la BD. Le CSS est à revoir car tout n'est pas forcément 'beau' ou fonctionnel.
