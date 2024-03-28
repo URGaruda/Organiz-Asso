@@ -1,6 +1,8 @@
 # Organiz-Asso
 
-Projet de l'UE LU3IN017 - Technologies du Web. Frontend en React et Backend en NodeJs avec express.
+Projet de l'UE LU3IN017 - Technologies du Web.  
+Frontend en React et Backend en NodeJs avec express.  
+Base de données avec MongoDB.
 
 ## Installation
 
@@ -41,21 +43,57 @@ La base de données est définit grâce à MongoDB.
 **users** : 
 ```json
 {
-   "_id" : objectId('6602f45a954659e97353c359'),
+   "_id" : "objectId('6602f45a954659e97353c359')",
+   "login" : "DupondDupond",
+   "password" : "$2b$10$qrhcNl.GR7xjWya/Btjp6.L4FFxiR.xpXAq0wkrWjstyb2UtQLnp.",
+   "lastname" : "Dupond",
+   "firsname" : "Dupond",
+   "status" : "member"
+}
+```
+Avec les champs _id de type `ObjectId` (généré automatiquement lors de l'ajout d'un document dans la base de donnée) et login, password, lastname, firsname, status, de type `String`.  
+A savoir que le password est cryté à l'aide de la bibliothèque `bcrypt` avant l'ajout dans la base de données.  Le status s'un user est initialisé de base à "member".
+
+**forums** : 
+```json
+{
+   "_id" : "objectId('6602f9c2391f27f96e5f84e4')",
+   "name" : "Forum membres",
+   "acces" : [ "member", "admin" ]
+}
+```
+Avec les champs _id de type `ObjectId`, name de type `String` et acces une liste de `String`.  Acces définit les status de user pouvant voir et ecrire dans le forum.  
+
+**messages** : 
+```json
+{
+   "_id" : "objectId('6602f45a954659e97353c359')",
    "login" : "DupondDupond",
    "password" : "$2b$10$qrhcNl.GR7xjWya/Btjp6.L4FFxiR.xpXAq0wkrWjstyb2UtQLnp.",
    "lastname" : "Dupond",
    "firsname" : "Dupond"
 }
 ```
-Avec les champs _id de type `ObjectId` (généré automatiquement lors de l'ajout d'un document dans la base de donnée) et login, password, lastname, firsname de type `String`. 
-A savoir que le password est cryté à l'aide de la bibliothèque `bcrypt` avant l'ajout dans la base de données.
-
-
-**forums** : 
-**messages** : 
 **comment** : 
-**sessions** : 
+```json
+{
+   "_id" : "objectId('6602f45a954659e97353c359')",
+   "login" : "DupondDupond",
+   "password" : "$2b$10$qrhcNl.GR7xjWya/Btjp6.L4FFxiR.xpXAq0wkrWjstyb2UtQLnp.",
+   "lastname" : "Dupond",
+   "firsname" : "Dupond"
+}
+```
+**sessions** :
+```json
+{
+   "_id" : "objectId('6602f45a954659e97353c359')",
+   "login" : "DupondDupond",
+   "password" : "$2b$10$qrhcNl.GR7xjWya/Btjp6.L4FFxiR.xpXAq0wkrWjstyb2UtQLnp.",
+   "lastname" : "Dupond",
+   "firsname" : "Dupond"
+}
+```
 
 
 ## Lancement
