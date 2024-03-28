@@ -102,16 +102,17 @@ Pour lancer le serveur, se placer dans le dossier `/server` et exécuter la comm
 Pour lancer le client, se placer dans le dossier `/client` et exécuter la commande `npm start` dans un terminal. Cela compilera et lancera le client à l'adresse `http://localhost:3000` par défaut (le navigateur s'ouvre automatiquement).  
 
 ## A faire
-Actuellement le backend est quasiment finit, touyes les requêtes nécéssaires sont pour le moment réalisées. Il peut cependant il y avoir des erreurs à corriger. Il y a encore quelques problème au niveau de l'authentification à gérer.
+Actuellement le backend est quasiment finit, toutes les requêtes nécéssaires sont pour le moment réalisées. Il peut cependant il y avoir des erreurs à corriger. Il y a encore quelques problèmes au niveau de l'authentification à gérer.
 Il reste tout le frontend à terminer. Notamment ajouter toutes les requêtes nécéssaires avec axios dans chaque composant où il faut récupérer les infos de la BD. Le CSS est à revoir car tout n'est pas forcément 'beau' ou fonctionnel.
 
 - CSS à revoir.
-- Potentiellement des composant à modifier ou créer si nécessaire ?
+- Potentiellement des composants à modifier ou créer si nécessaire ?
 - Intégrer les requêtes dans le frontend.
 - Régler le problème d'authentification.
 - Rédiger la description de tous les services mis en oeuvre par le server comme fait en TD/TME.
 - Commenter le code du Backend.
 
+## Commentaires
 Pour Daba :  
 Si tu as n'importe quelle question sur ce que j'ai fait ou si tu comprends pas qqchoce hésite pas à me demander. De même si tu as des idées de choses à rajouter dis moi aussi on verra ce qu'on peut faire.  
 Je pense que pour le moment tu peux essayé de faire la description des services ou voir pour le css si tu as des idées.    
