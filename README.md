@@ -4,5 +4,5 @@ Projet de l'UE LU3IN017 - Technologies du Web. Frontend en React et Backend en N
 
 ## Installation
 
-Une fois les fichiers téléchargés, dans un terminal faire un <code>npm install</code> dans le répertoire <code>/server</code> et dans le répertoire <code>/client</code> pour installer les dépendences nécéssaires (dossier node_modules).
+Une fois les fichiers téléchargés, dans un terminal faire un <code>npm install</code> dans le répertoire `/server` et dans le répertoire <code>/client</code> pour installer les dépendences nécéssaires (dossier node_modules).
 
