@@ -8,7 +8,8 @@ Base de données avec MongoDB.
 
 Une fois les fichiers téléchargés, dans un terminal faire un `npm install` dans le répertoire `/server` et dans le répertoire `/client` pour installer les dépendences nécéssaires (création du dossier `/node_modules`).
 
-1. **Base de donnée :** Pour relier la base de donnée au backend, modifier coté server dans le fichier `app.js` la ligne 42 `mongoUrl: "mongodb+srv://" + process.env.DB_USER_PASS + "@cluster0.ird5nik.mongodb.net/Organiz-Asso"` par le lien de la base MongoDB hébergé localement généralement `mongodb://localhost:27017` (à confirmer). De même dans le fichier `/config/db.js` modifier la ligne 2 avec l'url de la DB local. Le logiciel MongoDB Compass permet de visualiser graphiquement l'état de la base de données et d'y effectuer des modification sans utiliser les lignes de commandes.
+1. **Base de donnée :** Pour relier la base de donnée au backend, modifier coté server dans le fichier `app.js` la ligne 42 `mongoUrl: "mongodb+srv://" + process.env.DB_USER_PASS + "@cluster0.ird5nik.mongodb.net/Organiz-Asso"` par le lien de la base MongoDB hébergé localement généralement `mongodb://localhost:27017` (à confirmer). L'ajout de l'attribut `store` dans la configuration de express-session permet de stocker les informations de session directement dans la base de données MongoDB plutôt que dans la RAM (important qi beaucoup de users). De même dans le fichier `/config/db.js` modifier la ligne 2 avec l'url de la DB local.  
+Le logiciel MongoDB Compass permet de visualiser graphiquement l'état de la base de données et d'y effectuer des modification sans utiliser les lignes de commandes.
    
 2.  **Postman :** L'utilisation de Postaman est recommandé pour tester les requêtes au serveur.
 
@@ -67,33 +68,51 @@ Avec les champs _id de type `ObjectId`, name de type `String` et acces une liste
 **messages** : 
 ```json
 {
-   "_id" : "objectId('6602f45a954659e97353c359')",
-   "login" : "DupondDupond",
-   "password" : "$2b$10$qrhcNl.GR7xjWya/Btjp6.L4FFxiR.xpXAq0wkrWjstyb2UtQLnp.",
-   "lastname" : "Dupond",
-   "firsname" : "Dupond"
+   "_id" : "objectId('66047529ae1a22ee065d71ec')",
+   "forumId" : "6602f9c2391f27f96e5f84e4",
+   "authorId" : "6602f45a954659e97353c359",
+   "authorName" : "Dupond",
+   "date" : "2024-03-27T19:36:09.108+00:00",
+   "text" : "Ceci est un premier message",
+   "modified" : false
 }
 ```
-**comment** : 
+Avec les champs _id de type `ObjectId`, forumId, authorId, authorName et text de type `String`. Le champs date est de type `Date` et modified est de type `Boolean`.  
+
+**comments** : 
 ```json
 {
-   "_id" : "objectId('6602f45a954659e97353c359')",
-   "login" : "DupondDupond",
-   "password" : "$2b$10$qrhcNl.GR7xjWya/Btjp6.L4FFxiR.xpXAq0wkrWjstyb2UtQLnp.",
-   "lastname" : "Dupond",
-   "firsname" : "Dupond"
+   "_id" : "objectId('66047529ae1a22ee065d82ab')",
+   "messageId" : "66047529ae1a22ee065d71ec",
+   "authorId" : "6602f45a954659e97353c359",
+   "authorName" : "Dupond",
+   "date" : "2024-03-27T19:36:09.108+00:00",
+   "text" : "Ceci est un premier commentaire",
+   "modified" : false
 }
 ```
-**sessions** :
-```json
-{
-   "_id" : "objectId('6602f45a954659e97353c359')",
-   "login" : "DupondDupond",
-   "password" : "$2b$10$qrhcNl.GR7xjWya/Btjp6.L4FFxiR.xpXAq0wkrWjstyb2UtQLnp.",
-   "lastname" : "Dupond",
-   "firsname" : "Dupond"
-}
-```
+Avec les champs _id de type `ObjectId`, messageId, authorId, authorName et text de type `String`. Le champs date est de type `Date` et modified est de type `Boolean`.    
+
+**sessions** : Est généré automatiquement par express-session et contient l'id de la session et le cookie associé.  
 
 
 ## Lancement
+
+Pour lancer le serveur, se placer dans le dossier `/server` et exécuter la commande `npm start` dans un terminal. Cela lancera le serveur à l'adresse `http://localhost:4000` par défaut.  
+Pour lancer le client, se placer dans le dossier `/client` et exécuter la commande `npm start` dans un terminal. Cela compilera et lancera le client à l'adresse `http://localhost:3000` par défaut (le navigateur s'ouvre automatiquement).  
+
+## A faire
+Actuellement le backend est quasiment finit, touyes les requêtes nécéssaires sont pour le moment réalisées. Il peut cependant il y avoir des erreurs à corriger. Il y a encore quelques problème au niveau de l'authentification à gérer.
+Il reste tout le frontend à terminer. Notamment ajouter toutes les requêtes nécéssaires avec axios dans chaque composant où il faut récupérer les infos de la BD. Le CSS est à revoir car tout n'est pas forcément 'beau' ou fonctionnel.
+
+- CSS à revoir.
+- Potentiellement des composant à modifier ou créer si nécessaire ?
+- Intégrer les requêtes dans le frontend.
+- Régler le problème d'authentification.
+- Rédiger la description de tous les services mis en oeuvre par le server comme fait en TD/TME.
+- Commenter le code du Backend.
+
+Pour Daba :  
+Si tu as n'importe quelle question sur ce que j'ai fait ou si tu comprends pas qqchoce hésite pas à me demander. De même si tu as des idées de choses à rajouter dis moi aussi on verra ce qu'on peut faire.  
+Je pense que pour le moment tu peux essayé de faire la description des services ou voir pour le css si tu as des idées.    
+Moi je vais m'occuper de commenter tous le code que j'ai fais pour le serveur pour que ça soit plus clair. Pour le moment je pense que j'ai pas mal d'avance par rapport à l'avancée des TD/TME donc on est pas en retard du tout. Ce qui veut dire qu'on peut prendre notre temps pour faire ça le plus proprement possible et surtout pour que tu comprennes bien tout ce que j'ai déjà fais.
