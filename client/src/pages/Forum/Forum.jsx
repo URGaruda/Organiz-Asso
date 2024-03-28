@@ -11,10 +11,11 @@ import { UidContext } from '../../components/AppContext';
 
 function Forum(props) {
   const uid = useContext(UidContext);
-
-  if (uid) {
-    return <Navigate to='/' replace/>;
-  }
+  
+  // Si pas d'id de session on redirige vers la page de connexion.
+  //if (!uid) {
+  //  return <Navigate to='/login' replace/>;
+  //}
 
   const url = 'http://localhost:4000/api/user/' + uid;
   const user = axios.get(url);
