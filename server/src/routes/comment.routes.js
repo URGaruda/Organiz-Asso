@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const commentController = require('../controllers/comment.controller');
 
-// Messages
+// Comment
 router.get('/:id', commentController.commentInfo);
 router.get('/message/:id', commentController.getAllMessagesComments);
 
