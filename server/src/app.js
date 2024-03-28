@@ -19,7 +19,7 @@ console.debug(`Base directory: ${basedir}`);
 // Config cors
 app.use(cors({
   origin: "http://localhost:3000",
-  methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD'],
+  methods: ['POST', 'PUT', 'GET', 'PATCH', 'DELETE', 'OPTIONS', 'HEAD'],
   credentials: true
 }));
 
@@ -39,7 +39,7 @@ app.use(session({
     sameSite: 'None'
   },
   store: MongoStore.create({
-    mongoUrl: "mongodb+srv://axelCeresa:Hicko94!@cluster0.ird5nik.mongodb.net/Organiz-Asso",
+    mongoUrl: "mongodb+srv://" + process.env.DB_USER_PASS + "@cluster0.ird5nik.mongodb.net/Organiz-Asso",
   })
 }));
 
