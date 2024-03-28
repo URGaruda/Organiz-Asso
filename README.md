@@ -39,6 +39,7 @@ La base de données est définit grâce à MongoDB.
 ### Définition des collections :
 
 **users** : 
+```json
 {
    _id : objectId('6602f45a954659e97353c359'),
    login : DupondDupond,
@@ -46,7 +47,7 @@ La base de données est définit grâce à MongoDB.
    lastname : Dupond,
    firsname : Dupond
 }
-
+```
 Avec les champs _id de type `ObjectId` (généré automatiquement lors de l'ajout d'un document dans la base de donnée) et login, password, lastname, firsname de type `String`. 
 A savoir que le password est cryté à l'aide de la bibliothèque `bcrypt` avant l'ajout dans la base de données.
 
