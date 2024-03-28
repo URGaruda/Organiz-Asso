@@ -115,5 +115,7 @@ Il reste tout le frontend à terminer. Notamment ajouter toutes les requêtes n�
 ## Commentaires
 Pour Daba :  
 Si tu as n'importe quelle question sur ce que j'ai fait ou si tu comprends pas qqchoce hésite pas à me demander. De même si tu as des idées de choses à rajouter dis moi aussi on verra ce qu'on peut faire.  
-Je pense que pour le moment tu peux essayé de faire la description des services ou voir pour le css si tu as des idées.    
+
+Je pense que pour le moment tu peux essayé de faire la description des services ou voir pour le css si tu as des idées. Commence déjà par bien tout installer et hésite pas à tester les requête avec Postman pour comprendre ce qu'elle font ça peut t'aider. Je sais que débarquer en plein milieu d'un projet c'est pas évident mais je vais essayer de faire en sorte que tu rattrape rapidement le retard.    
+
 Moi je vais m'occuper de commenter tous le code que j'ai fais pour le serveur pour que ça soit plus clair. Pour le moment je pense que j'ai pas mal d'avance par rapport à l'avancée des TD/TME donc on est pas en retard du tout. Ce qui veut dire qu'on peut prendre notre temps pour faire ça le plus proprement possible et surtout pour que tu comprennes bien tout ce que j'ai déjà fais.
