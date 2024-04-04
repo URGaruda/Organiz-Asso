@@ -17,7 +17,7 @@ module.exports.createForum = async (req, res) => {
     const forums = new Forums.default(db_forums);
 
     if(await forums.existsName(name)) {
-      res.status(409).json({ message: "Erreur : Nom déjà utilisé" })
+      res.status(409).json({ status: 409, message: "Erreur : Nom déjà utilisé" })
       return;
     }
 

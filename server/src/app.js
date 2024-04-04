@@ -39,7 +39,7 @@ app.use(session({
     sameSite: 'None'
   },
   store: MongoStore.create({
-    mongoUrl: "mongodb+srv://" + process.env.DB_USER_PASS + "@cluster0.ird5nik.mongodb.net/Organiz-Asso",
+    mongoUrl: "mongodb+srv://axelCeresa:Hicko94!@cluster0.ird5nik.mongodb.net/Organiz-Asso",
   })
 }));
 
@@ -47,10 +47,10 @@ app.use(session({
 
 const { checkUser, requireAuth } = require('./middleware/auth.middleware');
 // Middleware de verification de session
-app.get('*', checkUser);
-app.get('/uid', requireAuth, (req, res) => {
-  res.status(200).json({ userid: res.locals.user._id.toString() });
-});
+//app.get('*', checkUser);
+//app.get('/uid', requireAuth, (req, res) => {
+//  res.status(200).json({ userid: res.locals.user._id.toString() });
+//});
 
 
 
