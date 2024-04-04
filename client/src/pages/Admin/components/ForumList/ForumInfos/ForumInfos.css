@@ -1,0 +1,33 @@
+.forum-infos-container {
+  border-bottom: 1px solid grey;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.forum-infos-container .infos {
+  display: flex;
+  margin-right: auto;
+  align-items: center;
+}
+
+.forum-infos-container .infos .name{
+  text-align: left;
+  width: 200px;
+}
+
+.forum-infos-container .infos p{
+  margin-left: 50px;
+}
+
+.forum-infos-container .infos .checkboxes input{
+  margin-left: 10px;
+}
+
+.forum-infos-container .options {
+  display: flex;
+  margin-left: auto;
+}
+
+.forum-infos-container .error{
+  color: red;
+}

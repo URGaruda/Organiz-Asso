@@ -1,4 +1,4 @@
-.block {
+.sidebar-container {
   display: flex;
 }
 
@@ -11,18 +11,27 @@
     padding: 5px;
     color: black;
     margin-right: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar button {
-  display: block;
-  width: 100%;
+  background: transparent;
+  border: none;
   padding: 10px;
   margin-bottom: 5px;
-  background-color: transparent;
-  color: white;
+  color: #fff;
   text-align: left;
-  border: none;
   font-size: 16px;
+}
+
+.sidebar a {
+  padding: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
 }
 
 .sidebar button:hover {
@@ -31,9 +40,21 @@
 
 .submenu {
   padding-left: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.submenu button {
+.submenu a {
+  color: #fff;
   font-size: 16px;
-  margin-top: 5px;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  cursor: pointer;
+}
+
+.submenu a:visited {
+  color: #fff;
 }

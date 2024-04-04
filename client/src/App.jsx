@@ -18,15 +18,15 @@ function App() {
   const [uid, setUid] = useState(null);
 
   const getUserId  = async() => {
-    await axios.get("/uid", {}, {withCredentials:true})
+    await axios.get("http://localhost:4000/uid")
       .then((res) => setUid(res.data.userid))
-      .catch((err) => console.log(err.response.data));
+      .catch((err) => console.log(err));
     };
 
 
   useEffect(() => {
     window.setTimeout(() => {
-      getUserId();
+      //getUserId();
     }, 1000);
   }, [uid]);
 

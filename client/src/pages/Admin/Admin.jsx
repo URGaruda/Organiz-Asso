@@ -14,11 +14,10 @@ function Admin(props) {
   const [isUserListOpen, setUserListOpen] = useState(false);
 
   const uid = useContext(UidContext);
-  
-  // Si pas d'id de session on redirige vers la page de connexion.
-  //if (!uid) {
-  //  return <Navigate to='/login' replace/>;
-  //}
+
+  if (uid) {
+    return <Navigate to='/' replace/>;
+  }
 
   function toggleForumList() {
     setIsForumListOpen(!isForumListOpen);
@@ -42,7 +41,7 @@ function Admin(props) {
             <h3>Voir la liste des utilisateurs</h3>
           </div>
           <ForumList isOpen={isForumListOpen} onClose={toggleForumList} />
-          <UserList isOpen={isForumListOpen} onClose={toggleUserList} />
+          <UserList isOpen={isUserListOpen} onClose={toggleUserList} />
         </main>
       </div>
     </div>

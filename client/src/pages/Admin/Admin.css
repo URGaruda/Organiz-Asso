@@ -2,24 +2,32 @@
   text-align: center;
 }
 
-.forum-list{
+.main-content .forum-list{
   text-align: left;
   margin-top: 10px;
   border: 0.1;
+  width: auto;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.user-list{
+.main-content .user-list{
   text-align: left;
   margin-top: 10px;
   border: 0.1;
+  width: auto;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.forum-list:hover{
+.main-content .forum-list:hover{
   cursor: pointer;
-  background-color: #f2f2f2;;
+  background-color: #ccc;;
 }
 
-.user-list:hover{
+.main-content .user-list:hover{
   cursor: pointer;
-  background-color: #f2f2f2;;
+  background-color: #ccc;;
 }

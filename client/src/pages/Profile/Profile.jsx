@@ -11,10 +11,9 @@ import { UidContext } from '../../components/AppContext';
 function Profile(props) {
   const uid = useContext(UidContext);
 
-  // Si pas d'id de session on redirige vers la page de connexion.
-  //if (!uid) {
-  //  return <Navigate to='/login' replace/>;
-  //}
+  if (!uid) {
+    return <Navigate to='/' replace/>;
+  }
 
   return (
     <div>

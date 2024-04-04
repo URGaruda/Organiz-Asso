@@ -10,29 +10,29 @@
   align-items: center;
 }
 
-.user-list {
-  background-color: #f2f2f2;
+.user-list-overlay .user-list-container {
+  background-color: #fff;
   border-radius: 10px;
   padding: 20px;
-  width: auto;
+  width: 1000px;
 }
 
-.header {
+.user-list-header {
   display: flex;
   justify-content: center;
 }
 
-.header h2 {
+.user-list-header  h2 {
   margin-top: 0;
   color: black;
   text-shadow: none;
   margin-right: auto;
 }
 
-.header button {
+.user-list-header  button {
   border: none;
   border-radius: 10px;
-  background-color: #f2f2f2;
+  background-color: #fff;
   color: black;
   cursor: pointer;
   height: 30px;
@@ -40,7 +40,6 @@
   margin-left: auto;
 }
 
-.header button:hover {
+.user-list-header  button:hover {
   background-color: #ccc;
-  color: #fff;
 }

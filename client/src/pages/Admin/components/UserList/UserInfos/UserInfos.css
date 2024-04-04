@@ -1,0 +1,33 @@
+.user-infos-container {
+  border-bottom: 1px solid grey;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.user-infos-container .infos {
+  display: flex;
+  margin-right: auto;
+  align-items: center;
+}
+
+.user-infos-container .infos .userName{
+  text-align: left;
+  width: 200px;
+}
+
+.user-infos-container .infos p{
+  margin-left: 50px;
+}
+
+.user-infos-container .infos .checkboxes input{
+  margin-left: 10px;
+}
+
+.user-infos-container .options {
+  display: flex;
+  margin-left: auto;
+}
+
+.user-infos-container .error{
+  color: red;
+}
